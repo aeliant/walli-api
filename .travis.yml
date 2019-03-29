@@ -1,0 +1,16 @@
+language: python
+python:
+- '3.4'
+- '3.5'
+- '3.6'
+before_install:
+- pip install codecov
+install:
+- pip install -r requirements-dev.txt -r requirements.txt
+script:
+- nosetests --with-coverage --cover-package=walli
+after_success:
+- codecov --gcov-root walli
+environment:
+  global:
+  - FLASK_SECRET=asecretkeyusedfortestingpurposeonly
