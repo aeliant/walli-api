@@ -17,7 +17,7 @@ class TestDevelopmentConfig(TestCase):
 
     def test_app_is_in_development_mode(self):
         """Checks that the development configuration is correctly loaded."""
-        self.assertNotEqual(app.config.get('SECRET_KEY'), 'secret-to-change')
+        self.assertNotEqual(app.config.get('FLASK_SECRET_KEY'), 'secret-to-change')
         self.assertIsNotNone(current_app)
         self.assertTrue(app.config.get('DEBUG'))
 
@@ -32,7 +32,7 @@ class TestProductionConfig(TestCase):
 
     def test_app_is_in_production_mode(self):
         """Checks that the production configuration is correctly loaded."""
-        self.assertNotEqual(app.config.get('SECRET_KEY'), 'secret-to-change')
+        self.assertNotEqual(app.config.get('FLASK_SECRET_KEY'), 'secret-to-change')
         self.assertIsNotNone(current_app)
         self.assertFalse(app.config.get('DEBUG'))
 
@@ -47,7 +47,7 @@ class TestTestingConfig(TestCase):
 
     def test_app_is_in_testing_mode(self):
         """Checks that the testing configuration is correcty loaded."""
-        self.assertNotEqual('secret-to-change', app.config.get('SECRET_KEY'))
+        self.assertNotEqual('secret-to-change', app.config.get('FLASK_SECRET_KEY'))
         self.assertIsNotNone(current_app)
         self.assertTrue(app.config.get('DEBUG'))
 
