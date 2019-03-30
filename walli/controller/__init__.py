@@ -8,4 +8,4 @@ blueprint = Blueprint('api', __name__)
 api = Api(blueprint,
           title='Walli API',
           version=API_VERSION,
-          description='An api for managing Nginx configuration')
+          description='An api for managing your linux firewall (iptables)')
