@@ -1,6 +1,6 @@
 """Base class for flask testing."""
 from flask_testing import TestCase
-from manage import app
+from app import app
 
 
 class BaseTestCase(TestCase):
@@ -8,5 +8,5 @@ class BaseTestCase(TestCase):
 
     def create_app(self):
         """Create the flask testing application."""
-        app.config.from_object('nginx_pilot_api.config.TestingConfig')
+        app.config.from_object('walli.config.TestingConfig')
         return app
