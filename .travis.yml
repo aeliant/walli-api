@@ -5,12 +5,13 @@ python:
 - '3.6'
 before_install:
 - pip install codecov
+- pip install poetry
 install:
-- pip install -r requirements-dev.txt -r requirements.txt
+- poetry install
 script:
-- nosetests --with-coverage --cover-package=walli_api
+- poetry run nosetests --with-coverage --cover-package=walli_api
 after_success:
-- codecov --gcov-root walli
+- poetry run codecov --gcov-root walli
 environment:
   global:
   - FLASK_SECRET=asecretkeyusedfortestingpurposeonly
