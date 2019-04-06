@@ -195,11 +195,11 @@ description = "The comprehensive WSGI web application library."
 name = "werkzeug"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.15.1"
+version = "0.15.2"
 
 [metadata]
-content-hash = "c2dce24e4448c2337288f73d430569d31c04c4f3e3a75cfa0261e7b7907eb43a"
-python-versions = "~3.6"
+content-hash = "8eb166c6f867a811bd088a4c9ada0c9572a7a4a0c440bdf8e57c32e6d9c2a98d"
+python-versions = "~3.4 || ~3.5 || ~3.6"
 
 [metadata.hashes]
 aniso8601 = ["b8a6a9b24611fc50cf2d9b45d371bfdc4fd0581d1cc52254f5502130a776d4af", "bb167645c79f7a438f9dfab6161af9bed75508c645b1f07d1158240841d22673"]
@@ -221,4 +221,4 @@ python-dateutil = ["7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493d
 pytz = ["32b0891edff07e28efe91284ed9c31e123d84bea3fd98e1f72be2508f43ef8d9", "d5f05e487007e29e03409f9398d074e158d920d36eb82eaf66fb1136b0c5374c"]
 six = ["3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c", "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"]
 text-unidecode = ["5a1375bb2ba7968740508ae38d92e1f889a0832913cb1c447d5e2046061a396d", "801e38bd550b943563660a91de8d4b6fa5df60a542be9093f7abf819f86050cc"]
-werkzeug = ["96da23fa8ccecbc3ae832a83df5c722c11547d021637faacb0bec4dd2f4666c8", "ca5c2dcd367d6c0df87185b9082929d255358f5391923269335782b213d52655"]
+werkzeug = ["0a73e8bb2ff2feecfc5d56e6f458f5b99290ef34f565ffb2665801ff7de6af7a", "7fad9770a8778f9576693f0cc29c7dcc36964df916b83734f4431c0e612a7fbc"]
