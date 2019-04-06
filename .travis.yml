@@ -9,6 +9,7 @@ before_install:
 install:
 - poetry install
 script:
+- iptables -L
 - poetry run nosetests --with-coverage --cover-package=walli_api
 after_success:
 - poetry run codecov --gcov-root walli
