@@ -8,7 +8,7 @@ before_install:
 install:
 - pip install -r requirements-dev.txt -r requirements.txt
 script:
-- nosetests --with-coverage --cover-package=walli
+- nosetests --with-coverage --cover-package=walli_api
 after_success:
 - codecov --gcov-root walli
 environment:

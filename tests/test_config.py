@@ -12,7 +12,7 @@ class TestDevelopmentConfig(TestCase):
 
     def create_app(self):
         """Create the flask application for testing purpose."""
-        app.config.from_object('walli.config.DevelopmentConfig')
+        app.config.from_object('walli_api.config.DevelopmentConfig')
         return app
 
     def test_app_is_in_development_mode(self):
@@ -27,7 +27,7 @@ class TestProductionConfig(TestCase):
 
     def create_app(self):
         """Create the testing flas application."""
-        app.config.from_object('walli.config.ProductionConfig')
+        app.config.from_object('walli_api.config.ProductionConfig')
         return app
 
     def test_app_is_in_production_mode(self):
@@ -42,7 +42,7 @@ class TestTestingConfig(TestCase):
 
     def create_app(self):
         """Create the testing flask application."""
-        app.config.from_object('walli.config.TestingConfig')
+        app.config.from_object('walli_api.config.TestingConfig')
         return app
 
     def test_app_is_in_testing_mode(self):

@@ -1,6 +1,6 @@
 """About controller functional tests."""
 from base import BaseTestCase
-from walli.config import API_VERSION
+from walli_api.config import API_VERSION
 
 
 class TestAbout(BaseTestCase):

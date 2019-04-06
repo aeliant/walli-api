@@ -1,3 +1,6 @@
 venv
 .coverage
 **/__pycache__
+dist
+walli_api.egg-info
+pip-wheel-metadata

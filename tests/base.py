@@ -8,5 +8,5 @@ class BaseTestCase(TestCase):
 
     def create_app(self):
         """Create the flask testing application."""
-        app.config.from_object('walli.config.TestingConfig')
+        app.config.from_object('walli_api.config.TestingConfig')
         return app
