@@ -6,6 +6,8 @@ python:
 env:
 - DOCKER_TESTING_HOST=localhost
 - DOCKER_TESTING_PORT=54310
+services:
+- docker
 before_install:
 - make build-test
 - make run-test
