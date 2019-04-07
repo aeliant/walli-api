@@ -17,7 +17,7 @@ def test_chains_collection_for_filter_table():
     client = docker.from_env()
     container = client.containers.list()[0]
     chains = parse_chains(
-        container.exec_run('iptables -t filter -L').output.decode())
+        container.exec_run(['iptables', '-t', 'filter', '-L']).output.decode())
 
     response = requests.get('%s/chains/filter' % URL)
 
@@ -31,7 +31,7 @@ def test_chains_collection_for_mangle_table():
     client = docker.from_env()
     container = client.containers.list()[0]
     chains = parse_chains(
-        container.exec_run('iptables -t mangle -L').output.decode())
+        container.exec_run(['iptables', '-t', 'mangle', '-L']).output.decode())
 
     response = requests.get('%s/chains/mangle' % URL)
 
@@ -45,7 +45,7 @@ def test_chains_collection_for_raw_table():
     client = docker.from_env()
     container = client.containers.list()[0]
     chains = parse_chains(
-        container.exec_run('iptables -t raw -L').output.decode())
+        container.exec_run(['iptables', '-t', 'raw', '-L']).output.decode())
 
     response = requests.get('%s/chains/raw' % URL)
 
@@ -59,7 +59,7 @@ def test_chains_collection_for_nat_table():
     client = docker.from_env()
     container = client.containers.list()[0]
     chains = parse_chains(
-        container.exec_run('iptables -t nat -L').output.decode())
+        container.exec_run(['iptables', '-t', 'nat', '-L']).output.decode())
 
     response = requests.get('%s/chains/nat' % URL)
 
@@ -73,7 +73,7 @@ def test_chains_collection_for_security_table():
     client = docker.from_env()
     container = client.containers.list()[0]
     chains = parse_chains(
-        container.exec_run('iptables -t security -L').output.decode())
+        container.exec_run(['iptables', '-t', 'security', '-L']).output.decode())
 
     response = requests.get('%s/chains/security' % URL)
 
