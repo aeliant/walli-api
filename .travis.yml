@@ -3,16 +3,13 @@ python:
 - '3.4'
 - '3.5'
 - '3.6'
+env:
+- DOCKER_TESTING_HOST=localhost
+- DOCKER_TESTING_PORT=54310
 before_install:
-- pip install codecov
-- pip install poetry
+- make build-test
+- make run-test
 install:
-- poetry install
+- pip install -r requirements-dev.txt
 script:
-- iptables -L
-- poetry run nosetests --with-coverage --cover-package=walli_api
-after_success:
-- poetry run codecov --gcov-root walli
-environment:
-  global:
-  - FLASK_SECRET=asecretkeyusedfortestingpurposeonly
+- make tests
