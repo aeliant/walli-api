@@ -2,7 +2,10 @@
 from config import URL
 
 import requests
+import pytest
 
+
+@pytest.mark.all_table
 def test_tables_collection():
     """Checks validity of the tables collection."""
     response = requests.get('%s/tables' % URL)

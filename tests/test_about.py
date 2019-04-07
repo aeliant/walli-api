@@ -1,7 +1,11 @@
 """Functionnal tests for the about endpoint."""
 from config import URL
-import requests
 
+import requests
+import pytest
+
+
+@pytest.mark.all_table
 def test_about_validity():
     """Check validity of the returned result of /api/about."""
     response = requests.get('%s/about' % URL)
