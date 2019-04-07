@@ -1,16 +1,16 @@
-"""About controller functional tests."""
-from base import BaseTestCase
-from walli_api.config import API_VERSION
+"""Functionnal tests for the about endpoint."""
+from os import environ
 
+import requests
 
-class TestAbout(BaseTestCase):
-    """Functional tests for the about endpoints."""
+HOST = environ.get('DOCKER_TESTING_HOST', 'localhost')
+PORT = environ.get('DOCKER_TESTING_PORT', '54310')
+URL = 'http://%s:%s/api' % (HOST, PORT)
 
-    def test_endpoint_validity(self):
-        """Checks the validity of the returned data from /api/about."""
-        response = self.client.get('/api/about')
+def test_about_validity():
+    """Check validity of the returned result of /api/about."""
+    response = requests.get('%s/about' % URL)
 
-        self.assertEqual(200, response.status_code)
-        self.assertIsInstance(response.json, dict)
-        self.assertIn('version', response.json)
-        self.assertEqual(API_VERSION, response.json['version'])
+    assert 200 == response.status_code
+    assert isinstance(response.json(), dict)
+    assert 'version' in response.json()
