@@ -1,4 +1,5 @@
 """Functionnal tests for the about endpoint."""
+from config import URL
 import requests
 
 def test_about_validity():
