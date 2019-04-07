@@ -5,6 +5,7 @@ from ..config import API_VERSION
 
 from .about_controller import api as about_api
 from .tables_controller import api as table_api
+from .chains_controller import api as chain_api
 
 blueprint = Blueprint('api', __name__)
 
@@ -16,3 +17,4 @@ api = Api(blueprint,
 
 api.add_namespace(about_api, path='/about')
 api.add_namespace(table_api, path='/tables')
+api.add_namespace(chain_api, path='/chains')
